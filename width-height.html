@@ -8,7 +8,43 @@
 </head>
 <body>
     <script>
+        // window 表示浏览器中打开的窗口，window对象可省略
+        // document 是window的一部分 (window.document), HTML文档成为document对象
+        // window.location === document.location
+        // window.innerWidth / window.innerHeight
+        // window.outerWidth / window.outerHeight
+        // window.screen.height / window.screen.width
+        // widow.screen.availWidth / window.screen.availHeight
+        // window.screenTop / window.screenLeft 浏览器距屏幕顶部/左侧的距离
         
+
+        //1、document与client相关的宽高
+        // document.body.clientHeight / document.body.clientWidth 可视部分的宽高
+        // clientWidth = width+左右padding
+
+        // document.body.clientTop / document.body.clientLeft  读取元素border的宽度
+        // clientTop = boder.top(上边框的宽度)
+
+
+        //2、document与offset相关的宽高
+        // document.body.offsetWidth 
+        // offsetWidth = width + 左右padding + 左右boder 
+
+        // document.body.offsetTop
+        // 当前元素上边框外边缘到最近的已定位父级（offsetParent）上边框内边缘的距离。如果父级都没有定位，则分别是到body 顶部和左边的距离
+
+
+        //3、document与scroll相关的宽高
+        // document.body.scrollWidth
+        // 真实宽度（可视区域宽度+被隐藏区域宽度）
+
+        // scrollTop 元素中的内容超出其宽度时，元素被卷起的宽度
+
+        console.log(document) // #document
+        console.log(document.documentElement) // html
+        console.log(document.body) // body
+        document.documentElement.childNodes[2] === document.body
+
     </script>
 </body>
 </html>
